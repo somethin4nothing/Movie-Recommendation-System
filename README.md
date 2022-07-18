@@ -31,7 +31,7 @@
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">The data utilized by our movie recommendation system is actually relatively small, especially the user side of the dimension, while the normal recommendation system involves dimensions such as page dwell time, click frequency, collection and other such dimensions are not, as well as the user's own dimensions are relatively small, no address, age, gender and other such basic dimensions, so we crawl the data only scores and movie names and so on. This project mainly focuses on giving user id and movie id to predict the rating to this movie by the user. Ideally, a well-performed movie recommendation system shall recommend users with movies that share similar genres, or users&rsquo; favorite ones, or other favorite movies watched by users with similar interests.&nbsp;</span></p>
 <p><span style="font-weight: 400;">In the data collection part, we chose the public dataset called Movielens. The MovieLens dataset contains rating data for multiple movies from multiple users, and also includes movie metadata information and user attribute information. The only information we crawled was the score and the name of the movie, so we took out some more statistical dimensions from this information to use later. The movie data we crawled (except for movie details and picture information) is shown in Figure 1.</span></p>
-<img src="images/Movielens data composition.png" alt="Movielens data composition" style="height: 1000px; width:1000px;"/>
+<img src="images/Movielens data composition.png" alt="Movielens data composition" style="height: 380px; width:550px;"/>
 <p><span style="font-weight: 400;">Fig. 1 The detail of MovieLens dataset</span></p>
 <p>&nbsp;</p>
 <p><strong>2.1 Dataset File Ratings.csv</strong></p>
@@ -218,12 +218,15 @@
 <p><span style="font-weight: 400;">To continue data processing, we tried to clear out the null value in the data sets. First, we analyzed 27278 rows and 3 columns in the movieid dataframe. We now use &lsquo;movies.isnull().any().any()&lsquo; to determine if there are any null values and get the output &lsquo;False&rsquo;, which means we don't have any null values in this dataframe. We did the same data processing with the other two dataframes. The result showed that ratings don&rsquo;t have any null values, but the output of &lsquo;tags.isnull().any().any()&rsquo; is true, so we need to remove the null values with &lsquo;tags=tags.dropna()&rsquo; from the tags dataframe. The original output of &lsquo;tags.shape&rsquo; is (465564, 3). We now run &lsquo;tags.isnull().any().any()&rsquo; and &lsquo;tags.shape&rsquo; again and we get the output False and (465548, 3), which means we have found 6 null values that were already removed from this dataframe.&nbsp;</span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">The histogram plot below shows the distribution of ratings among the movies. This is the rating bar graph, we can see that the common rating values in our dataset are 4-star, followed by 3-start and 5-star.</span></p>
+<img src="images/rating.png" alt="ratings" style="height: 380px; width:550px;"/>
 <p><span style="font-weight: 400;">Fig. 2 The histogram plot of distribution of ratings among movies</span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">And from the box plot we can see that the median is approximately 3.5 and the range is from 1.5 to 5 followed by a few outliers that are below 1.5.&nbsp;</span></p>
+<img src="images/rating_boxplot.png" alt="ratings_boxplot" style="height: 380px; width:550px;"/>
 <p><span style="font-weight: 400;">Fig. 3 The boxplot of distribution of ratings among movies</span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">This is the bar graph for each movie genre, we can see that most movies in the data sets fall into the science fiction genre.</span></p>
+<img src="images/bar graph movie.png" alt="bar graph movie" style="height: 380px; width:550px;"/>
 <p><span style="font-weight: 400;">Fig. 4 The bar plot of distribution of movie genres</span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
