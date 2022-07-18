@@ -31,7 +31,7 @@
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">The data utilized by our movie recommendation system is actually relatively small, especially the user side of the dimension, while the normal recommendation system involves dimensions such as page dwell time, click frequency, collection and other such dimensions are not, as well as the user's own dimensions are relatively small, no address, age, gender and other such basic dimensions, so we crawl the data only scores and movie names and so on. This project mainly focuses on giving user id and movie id to predict the rating to this movie by the user. Ideally, a well-performed movie recommendation system shall recommend users with movies that share similar genres, or users&rsquo; favorite ones, or other favorite movies watched by users with similar interests.&nbsp;</span></p>
 <p><span style="font-weight: 400;">In the data collection part, we chose the public dataset called Movielens. The MovieLens dataset contains rating data for multiple movies from multiple users, and also includes movie metadata information and user attribute information. The only information we crawled was the score and the name of the movie, so we took out some more statistical dimensions from this information to use later. The movie data we crawled (except for movie details and picture information) is shown in Figure 1.</span></p>
-<img src="images/Movielens data composition.png" alt="Movielens data composition" style="height: 100px; width:100px;"/>
+<img src="images/Movielens data composition.png" alt="Movielens data composition" style="height: 1000px; width:1000px;"/>
 <p><span style="font-weight: 400;">Fig. 1 The detail of MovieLens dataset</span></p>
 <p>&nbsp;</p>
 <p><strong>2.1 Dataset File Ratings.csv</strong></p>
